@@ -14,7 +14,7 @@
 
 # ## 1. The problem formulation
 
-# In a marketing campaign, a retailer sends a coupon to the customer. How likely is it that the customer will buy the product? Maybe we should give it a shot since it won't cost us a lot. Statistically, we can make some experiments, estimate the probability, and then decide how to mark targets based on the results. Global warming is a big topic that is relevant to all people on the planet.  Since I am an independent thinker, not one who follows the crowd, I would like to ask: Is it possible to still do some random experiments for the conclusion? Maybe it is absolutely impossible. 
+# In a marketing campaign, a retailer sends a coupon to the customer. How likely is it that the customer will buy the product? Maybe we should give it a shot since it won't cost us a lot. Statistically, we can make some experiments, estimate the probability, and then decide how to mark targets based on the results. Global warming is a big topic that is relevant to all people on the planet.  As we are an independent thinker, not the ones who follow the crowd, we would like to ask: Is it possible to still do some random experiments for the conclusion? Maybe it is absolutely impossible. 
 # 
 # We need impeccable logic and support from data!
 # 
@@ -42,7 +42,7 @@
 # 
 # This is in fact an optimization problem with a maximum likelihood function.
 # 
-# Suppose the probability of getting out red ball is $\theta\, which is the Bernolli distribution:
+# Suppose the probability of getting out red ball is $\theta$, which is the Bernolli distribution:
 # 
 # $$
 # p(x_i, \theta) = \theta^{x_i}(1-\theta)^{(1-x_i)}
