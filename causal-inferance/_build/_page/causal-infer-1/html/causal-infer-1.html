@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine learning and Causal Inference &#8212; My sample book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+    
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/causal-infer-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/causal-infer-1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tianxu-jia">
+   Tianxu Jia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#station10-ltd">
+   Station10 Ltd
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criticism-of-machine-learning">
+   Criticism of machine learning..
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#machine-learning-make-no-sense-without-speaking-causality">
+   Machine Learning Make No Sense Without Speaking Causality.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ladder-of-causality">
+   Ladder of Causality
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="machine-learning-and-causal-inference">
+<h1>Machine learning and Causal Inference<a class="headerlink" href="#machine-learning-and-causal-inference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tianxu-jia">
+<h2>Tianxu Jia<a class="headerlink" href="#tianxu-jia" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="station10-ltd">
+<h2>Station10 Ltd<a class="headerlink" href="#station10-ltd" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="criticism-of-machine-learning">
+<h2>Criticism of machine learning..<a class="headerlink" href="#criticism-of-machine-learning" title="Permalink to this headline">¶</a></h2>
+<p>Artificial intelligence has evolved through countless waves, finally ushering in a new revolution in the age of the deep learning explosion. People are amazed to discover that AI has become powerful enough to beat the highest level of human Go players, to accurately catch absconding criminals through facial recognition technology, and to learn grammar from thousands of poems and create new verses without breaking a sweat, on a level comparable to ancient poets. In the year 2020, when the new crown pneumonia is raging, artificial intelligence is even more prominent, playing a vital role in epidemic prediction, crowd control, community distribution, disease tracing and new drug development, greatly solving the problem of urban governance for mega populations in extremely harsh conditions.</p>
+<p>Behind all these applications, advanced deep learning technologies and ample data and computing resources are to be credited. However, it is also becoming increasingly apparent that many skills that humans can easily understand and master are still difficult for artificial intelligence. This is particularly true in the field of robotics: thanks to advances in AI, robots can already sense their environment with precision, build complex maps and even communicate with people like friends without barriers. However, many everyday operations that humans find very simple are still a long way off for robots. There are many reasons for this, but one of the most important is that while robots have made great breakthroughs in their sensory capabilities, their brains, or ‘decision making’ capabilities, are particularly inadequate, making it difficult for them to adapt when faced with similar but different tasks. For example, with improvements in hardware such as motors and gearboxes, robots have been able to execute trajectories with precision and apply forces and moments with accuracy, but the lack of adaptability or</p>
+<p>On the other hand, when faced with a complex and changing sequence of tasks, humans can easily know what to do and what not to do, what to do first and what to do second, based on their long-standing knowledge, experience and habits. For example, when making a cup of coffee, we usually add the coffee powder first, then fill it with boiling water, then add a little milk, and finally add a cube of sugar. This order is not absolute, we can also add sugar first and then milk, or boiling water first and then coffee powder, it doesn’t seem to matter. But we rarely add the milk first, then the boiling water, then the coffee (which certainly doesn’t make for good coffee). But it’s not so easy to make robots understand this large set of logic. The robot doesn’t know that the reason for adding the boiling water first is that it is the boiling water that brews the coffee powder, while the milk does not. Examples include the planning of complex processes on production lines, the order in which</p>
+</div>
+<div class="section" id="machine-learning-make-no-sense-without-speaking-causality">
+<h2>Machine Learning Make No Sense Without Speaking Causality.<a class="headerlink" href="#machine-learning-make-no-sense-without-speaking-causality" title="Permalink to this headline">¶</a></h2>
+<p>That said, we’re finally getting to the good stuff! Much of the logic behind what robots can’t learn is actually cause and effect. The complex world is full of cause and effect, and human beings are the masters of the world, adept at forming their own knowledge by drawing patterns from a wide variety of things. A wise man knows the autumn by its leaves, but a foolish man “sees the coffin before he cries”. Now, more and more scientists are realising that robots and artificial intelligence also need this kind of reasoning ability in order to move from weak to strong artificial intelligence. Many researchers who study and apply deep learning are also starting to incorporate causal ideas and theories. This is also partly due to the fact that deep learning itself is not a panacea, or even flawed, for example it requires large amounts of data (and collecting large numbers of samples in many fields is not easy), but it also requires finely designed network structures and well-tuned hyperparameters. These factors aside, deep learning itself does not take into account causality, but merely ‘curve-fitting’. This is a point that will be elaborated upon later.</p>
+<p>Here is a simple example of why the absence of cause and effect can be problematic [1]. We know that deep learning, and in particular imitation learning-based thinking, has been studied in the field of driverlessness for several years. One of the earliest algorithms, called DAgger, was to record the driving process of an experienced human driver and then train a model for controlling the vehicle. However, during training it was found that not</p>
+<p>That said, we’re finally getting to the good stuff! Much of the logic behind what robots can’t learn is actually cause and effect. The complex world is full of cause and effect, and human beings are the masters of the world, adept at forming their own knowledge by drawing patterns from a wide variety of things. A wise man knows the autumn by its leaves, but a foolish man “sees the coffin before he cries”. Now, more and more scientists are realising that robots and artificial intelligence also need this kind of reasoning ability in order to move from weak to strong artificial intelligence. Many researchers who study and apply deep learning are also starting to incorporate causal ideas and theories. This is also partly due to the fact that wouldn’t deep learning have been better off using more data features? As this example proves, it’s not necessarily good. The reason for the misleading algorithm is that the data on the left contains information about the brake indicator, and the algorithm incorrectly establishes a correlation between the brake indicator and the action of applying the brake, mistakenly assuming that if the brake indicator is on, the brake should be applied. The data on the right, on the other hand, does not contain information about the brake indicator, and the algorithm can only focus on the pedestrian outside the window, thus happening to establish the correct relationship. It turns out that focusing on the pedestrian outside the window rather than the brake indicator is the correct decision. The root of this is that the brake</p>
+</div>
+<div class="section" id="ladder-of-causality">
+<h2>Ladder of Causality<a class="headerlink" href="#ladder-of-causality" title="Permalink to this headline">¶</a></h2>
+<p>In the field of causality, I have to mention one of the biggest names in the field, Judea Pearl, known as the “father of Bayesian networks”, a Turing Award winner who sparked controversy and thought when she gave a presentation at the NIPS conference in 2017. At the time, the deep learning genre was much more fraught than it is now (it’s actually slowly been rationalised over the years), so it’s understandable that no one was asking for it. Since then, Pearl has written an accessible popular science book, The Book of Why: The New Science of Cause and Effect[2], the Chinese version of which, The Book of Why: The New Science of Cause and Effect, has been published by CITIC Publishing Group[3]. This book also seems to be leading a revolution in caus</p>
+<p>In this book Pearl divides causality into three levels (what he calls the ‘ladder of causality’). From the bottom to the top, they are: association, intervention, and counterfactual reasoning. At the bottom is Association, which is what we usually know deep learning to be doing, finding correlations between variables through observed data. This does not lead to the direction in which events affect each other, only that they are related. For example, we know that event A happens when event B also happens, but we do not dig into whether it is because the occurrence of event A causes event B to happen. The second level is Intervention, where we want to know whether Event B will change when we change Event A. The highest level is Conterfactuals, which can also be understood as ‘cause and effect’, i.e. we want to know if we can change event A if we want event B to change in some way.</p>
+<p>Fig</p>
+<p>So in short, correlation is not the same as causation; the first level of the ladder of causation involves only correlation, the second and third levels only involve causation. The relationship between these three levels can be explained clearly using a classic example. The New England Journal of Medicine published a paper stating that the more chocolate a country consumes, the more Nobel Prize winners that country produces per capita [4]. Such a conclusion is absurd, but what is the problem? By analysing the data, one does find that countries with high chocolate sales tend to win more Nobel Prizes, with an almost linear relationship between the two. But going this far only fits the bottom rung of the ladder of causality - correlation - and we only know that the two are related. In order to find out whether there is a causal relationship between the two, we can intervene and reason counterfactually. We can ask: if the nationals of a country with fewer Nobel prizes were given more chocolate, would that country have more Nobel laureates? This is the second level of ‘intervention’. Obviously, the answer is no (eating more chocolate does not lead to more Nobel prizes). Similarly, we can ask the question, if people in countries with a high number of Nobel Prizes did not eat so much chocolate, would they have won so many Nobel Prizes? This is the third level of counterfactual reasoning, and it is clear that the answer is yes (even if they did not eat so much chocolate, they would still win the Nobel Prize), because winning the Nobel Prize is not the ‘fruit’ of eating chocolate, but</p>
+<p>Fig</p>
+<p>Therefore, one of the biggest goals of studying causality is to find out what the real causal relationships between things are and to get rid of the confusing pseudo-causal relationships. Causality may be irrelevant in the case of the chocolate Nobel Prize, but it is very important in the fields of economics, medicine, the environment, politics, etc., and directly determines the behaviour of decision-makers. For example, if the causal relationship between ‘taking a pill’ and ‘being cured of a disease’ is not precisely known, then doctors will not be able to correctly determine whether or not to take the pill to treat the disease.</p>
+<p>Fortunately, there are more than enough ways to get past the fog and find the causal link between events.</p>
+<p>Reference:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Pim de Haan, Dinesh Jayaraman, Sergey Levine, &quot;Causal Confusion in Imitation Learning&quot;, arXiv:1905.11979 https://arxiv.org/abs/1905.11979?context=stat.ML    
+2. Judea Peral, Dana Mackenize, &quot;The Book of Why, the New Science of Cause and Efect&quot; 2019, Penguin Random House, UK.
+3. Franz H Messerli, &quot;Chocolate Consumption, Cognitive Function, and Nobel Laureates&quot;, The New England Journal of Medicine, vol. 367, no.16, pp.1562-1564, 2012. https://www.nejm.org/doi/full/10.1056/NEJMon1211064
+</pre></div>
+</div>
+<p>Here is my nifty citation <span id="id1">[<a class="reference internal" href="#id3">Perez <em>et al.</em>, 2011</a>]</span>.</p>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">PGA11</a></span></dt>
+<dd><p>Fernando Perez, Brian E Granger, and John D Aunter. Python: an ecosystem for scientific computing. <em>Computing in Science \\&amp; Engineering</em>, 13(2):13–21, 2011.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# _config.yml
+title: My sample book
+author: The Jupyter Book Community
+#logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+  
+bibtex_bibfiles:
+    - references.bib
+    
+sphinx:
+  config:
+    bibtex_reference_style: author_year
