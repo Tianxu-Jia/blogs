@@ -1,14 +1,7 @@
 # Churn Model, what? Why? and How?
 
 
-In this article, we first
-
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+In this article, we first analyze the limitations of the generic churn model through an user case story, based on that the churn model and marketing intervention system is proposed. This system not only forescast the churn of coustomer, the most importantly, it can provide the solution of how to intervene the coustomer and retain the costomer. After all, retaining customers and creating market value at a reasonable cost is one of the most important purposes of building a churn model. In the second part, we analyze all the challenges in building a customer churn and how to find the optimal intervention action. In the last part, the solutions to these challenges are given out.
 
 ```{tableofcontents}
 ```

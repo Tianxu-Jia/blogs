@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>solution &#8212; Churn Model</title>
+    <title>solutions the the Challenges &#8212; Churn Model</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="engineering" href="engineering.html" />
-    <link rel="prev" title="challenge" href="challenge.html" />
+    <link rel="prev" title="The Challenges of Churm Model" href="challenge.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,17 +101,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="churn_model.html">
-   Markdown Files
+   What is churn model?
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="challenge.html">
-   challenge
+   The Challenges of Churm Model
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   solution
+   solutions the the Challenges
   </a>
  </li>
  <li class="toctree-l1">
@@ -222,13 +222,23 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
+  <a class="reference internal nav-link" href="#adjust-formula">
+   1. Adjust Formula
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#inverse-weight">
+   2. Inverse weight
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backdoor-criterion">
+   3. Backdoor Criterion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-causal-model-scm">
+   4. Structure Causal Model(SCM)
   </a>
  </li>
 </ul>
@@ -241,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>solution</h1>
+                <h1>solutions the the Challenges</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -252,13 +262,23 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
+  <a class="reference internal nav-link" href="#adjust-formula">
+   1. Adjust Formula
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#inverse-weight">
+   2. Inverse weight
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backdoor-criterion">
+   3. Backdoor Criterion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-causal-model-scm">
+   4. Structure Causal Model(SCM)
   </a>
  </li>
 </ul>
@@ -270,24 +290,20 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="solution">
-<h1>solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="solutions-the-the-challenges">
+<h1>solutions the the Challenges<a class="headerlink" href="#solutions-the-the-challenges" title="Permalink to this headline">¶</a></h1>
 <p>We can image at the marketing department. Maybe the most important in the department is customers.</p>
-<div class="section" id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="challenge.html#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
+<div class="section" id="adjust-formula">
+<h2>1. Adjust Formula<a class="headerlink" href="#adjust-formula" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<div class="section" id="inverse-weight">
+<h2>2. Inverse weight<a class="headerlink" href="#inverse-weight" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="backdoor-criterion">
+<h2>3. Backdoor Criterion<a class="headerlink" href="#backdoor-criterion" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="structure-causal-model-scm">
+<h2>4. Structure Causal Model(SCM)<a class="headerlink" href="#structure-causal-model-scm" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -320,7 +336,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">challenge</p>
+            <p class="prev-next-title">The Challenges of Churm Model</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="engineering.html" title="next page">

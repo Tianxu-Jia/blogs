@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>challenge &#8212; Churn Model</title>
+    <title>The Challenges of Churm Model &#8212; Churn Model</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,10 +51,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="solution" href="solution.html" />
-    <link rel="prev" title="Markdown Files" href="churn_model.html" />
+    <link rel="prev" title="What is churn model?" href="churn_model.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,12 +103,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="churn_model.html">
-   Markdown Files
+   What is churn model?
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   challenge
+   The Challenges of Churm Model
   </a>
  </li>
  <li class="toctree-l1">
@@ -222,13 +224,18 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
+  <a class="reference internal nav-link" href="#forecast-and-causation">
+   1. Forecast and Causation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#observation-and-experimentation">
+   2. Observation and experimentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervention-and-counterfactual">
+   3. Intervention and counterfactual
   </a>
  </li>
 </ul>
@@ -241,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>challenge</h1>
+                <h1>The Challenges of Churm Model</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -252,13 +259,18 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
+  <a class="reference internal nav-link" href="#forecast-and-causation">
+   1. Forecast and Causation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#observation-and-experimentation">
+   2. Observation and experimentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervention-and-counterfactual">
+   3. Intervention and counterfactual
   </a>
  </li>
 </ul>
@@ -270,31 +282,33 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="challenge">
-<h1>challenge<a class="headerlink" href="#challenge" title="Permalink to this headline">¶</a></h1>
-<p>fgvsdgvd</p>
-<p>We can image at the marketing department. Maybe the most important in the department is customers.</p>
-<div class="section" id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-challenges-of-churm-model">
+<h1>The Challenges of Churm Model<a class="headerlink" href="#the-challenges-of-churm-model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="forecast-and-causation">
+<h2>1. Forecast and Causation<a class="headerlink" href="#forecast-and-causation" title="Permalink to this headline">¶</a></h2>
+<p style="margin-left:5%; margin-right:5%;">
+The four classification prediction in churn model is a trivial problem in machine learning. We have many mature machine learning algorithms for that. The real challenge is that for customers who can be persuaded, how we make an intervention. For understand the challenge, we need to understand the basic idea of forecast in machine learning, and what it means when we say intervention. How to use reasoning language to describe the doctor's intervention in the patient's course of disease.
 </p>
+<p style="margin-left:5%; margin-right:5%;">
+Prediction in machine learning is to predict another feature or event according to a certain feature or feature set. For example, predict someone's income based on their educational background, age, etc. Expressed in mathematical language, it is to establish the mapping between the feature data set and the predicted set. It means that we want to find a mathematical function between the two datasets. We can express if as 
+<div class="math notranslate nohighlight">
+\[
+y = f(x)
+\]</div>
+</p>
+<p style="margin-left:5%; margin-right:5%;">
+The mapping $f$ from $x$ to $y$ can be either correlation or causality. For example, we can use the cock crows to predict the rise of the sun, but We cannot control the rise of the sun by interfering with the crowing of the rooster. Why? Because between the cock crowing and the run rising is correlation, not causation. In the same way, we can predict a student's test score by his level ofeffort. If we interfere with a student's level of effort, we can really control his exam results. There is a causal relationship between a student's effort and his examination results.
+</p>
+<p style="margin-left:5%; margin-right:5%;">
+Let's come back to our churn model problem. We hope to retain customers through intervention. So, we hope to find the reason which make customer stay. The forecast in machine learning doesn't identify the causal relation, so, we should find other methods of identifying the causalities of retaining a customers.
+</p>
+<p style="margin-left:5%; margin-right:5%;"><strong>The first Challenge: Identify the causation of retaining customer.</strong></p>
 </div>
-<div class="section" id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<div class="section" id="observation-and-experimentation">
+<h2>2. Observation and experimentation<a class="headerlink" href="#observation-and-experimentation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="intervention-and-counterfactual">
+<h2>3. Intervention and counterfactual<a class="headerlink" href="#intervention-and-counterfactual" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -327,7 +341,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Markdown Files</p>
+            <p class="prev-next-title">What is churn model?</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="solution.html" title="next page">
