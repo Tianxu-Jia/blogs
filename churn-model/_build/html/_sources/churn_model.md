@@ -1,5 +1,6 @@
 # What is churn model?
 
+<div style="margin-left:5%; margin-right:5%;">
 If you check on google about the churn model, mostly you will find that building a churn model is to forecast which client will leave or not. There was a Kaggle challenge project about the churn model. Client churn was to be forecasted based on historical data.
 
 Make a future teller cristle seems fabulus! 
@@ -55,4 +56,4 @@ For the first class of customers, it is optimal that we don't do anything. For t
 
 So, the churn model should be a system that includes two parts: forecast and intervene. The forecast part identify who needs intervension and the intervention part determines the best intervention decision 
 
-
+</div>
