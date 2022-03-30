@@ -7,7 +7,4 @@ chapters:
 - file: churn_model
 - file: challenge
 - file: solution
-- file: engineering
 - file: conclusion
-- file: notebooks
-- file: markdown-notebooks

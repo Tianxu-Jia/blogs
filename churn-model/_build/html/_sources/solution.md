@@ -1,4 +1,4 @@
-# solutions the the Challenges
+# solutions to the the Challenges
 
 We can image at the marketing department. Maybe the most important in the department is customers. 
 ## 1. Adjust Formula
