@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. The Challenges of Churm Model &#8212; Churn Model</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="solutions to the the Challenges" href="solution.html" />
+    <link rel="prev" title="1. What is churn model?" href="churn_model.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Churn Model</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   The Churn Model in Practice
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="churn_model.html">
+   1. What is churn model?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. The Challenges of Churm Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution.html">
+   solutions to the the Challenges
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   conclusion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/challenge.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchallenge.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forecast-and-causation">
+   2.1. Forecast and Causation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observation-and-experimentation">
+   2.2. Observation and experimentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervention-and-counterfactual">
+   2.3. Intervention and Counterfactual
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2. The Challenges of Churm Model</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forecast-and-causation">
+   2.1. Forecast and Causation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observation-and-experimentation">
+   2.2. Observation and experimentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intervention-and-counterfactual">
+   2.3. Intervention and Counterfactual
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-challenges-of-churm-model">
+<h1>2. The Challenges of Churm Model<a class="headerlink" href="#the-challenges-of-churm-model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="forecast-and-causation">
+<h2>2.1. Forecast and Causation<a class="headerlink" href="#forecast-and-causation" title="Permalink to this headline">¶</a></h2>
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
+<p>In machine learning, the four classification prediction of the churn model is a simple problem. We have a large number of mature machine learning algorithms for this. The real challenge is determining how to intervene for customers who can be persuaded. To understand the challenge, we must first understand the fundamental concept of forecasting in machine learning, as well as what we mean by intervention. How to use logical reasoning language to describe a doctor’s intervention in the course of a patient’s disease.</p>
+<p>In machine learning, prediction is the prediction of another feature or event based on a specific feature or feature set. Predict someone’s income, for example, based on their educational background, age, and so on. It is to establish the mapping between the feature data set and the predicted set in mathematical terms. That is, we want to find a mathematical function that connects the two datasets. We can express it as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+y = f(x)
+\]</div>
+<p>The mapping <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(x\)</span> to <span class="math notranslate nohighlight">\(y\)</span> can be either correlation or causality. For example, we can use cock crows to predict the rising sun, but we cannot control the rising sun by interfering with rooster crowing. Why? Because the relationship between the cock crowing and the rising sun is one of correlation, not causation. Similarly, we can predict a student’s test score based on his effort. We can really influence a student’s exam results if we interfere with his level of effort. There is a causal relationship between a student’s effort and his examination results.</p>
+<p>Let’s return to our churn model issue. We hope to keep customers by intervening. So, we’re hoping to figure out what keeps customers stay. Because the forecast in machine learning does not identify the causal relationship, we must find other methods of identifying the causalities of customer retention.</p>
+<p style="color:blue; font-size:25px;"><strong>The first Challenge: Identify the causation of retaining customer.</strong></p>
+</div>
+</div>
+<div class="section" id="observation-and-experimentation">
+<h2>2.2. Observation and experimentation<a class="headerlink" href="#observation-and-experimentation" title="Permalink to this headline">¶</a></h2>
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
+It can be divided into observation data and experimental data based on the process of data generation.
+<p>The data obtained by controlling the experimental process and repeating experiments is referred to as experimental data. For example, nearly all physical and chemical experiment data. Causal reasoning is usually easier for it. We can control one variable while observing the change in another variable to determine whether there is a causal effect between them, and this type of experiment can be observed and measured repeatedly. We can, for example, control the cock’s crowing and observe whether the sun rises. We can then deduce whether there is a link between the cock crowing and the sun rising. In the object motion experiment, we can control the force applied to the object and observe the change in its acceleration to infer the causal relationship between force and acceleration.</p>
+<p>Observation data indicates that a researcher does not (or cannot) participate in the data generation process, but instead only studies the passively recorded data. For example, if we want to study World War II, we can’t launch another one and study it through repeated experiments. It is impossible to repeat the experiment in order to study an epidemic. It is also prohibitively expensive or impossible to replicate if we want to determine the cause of a marketing promotion’s success or failure. We can only collect data through observation, not intervention or experimentation.</p>
+<p>The causal reasoning of observed data will become extremely difficult, and there will be a lot of pseudo-knowledge in it at times. For instance, what caused the war. What factors contributed to the economic downturn and recovery? And so forth. Similarly, in the customer churn model, determining what causes customer churn is a difficult problem. The problem with inferring causality from observed data is that we can’t repeat the experiment and, at the same time, we don’t know how the data was generated. The phrase “all is in data” is commonly used in data science, but this is not true for observed data.</p>
+<p style="color:blue; font-size:25px;"> <strong>The second Challenge: How to identify causal from observation data?</strong></p>
+</div>
+</div>
+<div class="section" id="intervention-and-counterfactual">
+<h2>2.3. Intervention and Counterfactual<a class="headerlink" href="#intervention-and-counterfactual" title="Permalink to this headline">¶</a></h2>
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
+<p>Intervention is defined as any action that alters the course of development. Doctors, for example, can alter the course of a patient’s illness through treatment. Customers are retained by the marketing department through customer intervention.</p>
+<p>However, our prediction of intervention outcomes differs greatly from that of machine learning. In machine learning, the prediction is typically based on conditional probability, that is, the probability of the ff known condition A and the occurrence of event B, denoted by <span class="math notranslate nohighlight">\( P(B|A) \)</span>. The conditional probability meand that if we already know that event a happened, how certain are we about whether time B happened.</p>
+<p>Intervention and conditional probabilities are not the same thing. Intervention means that if we do event A, what will happen to event B? For example, if a person is 50 years old and never smokes, it is predicted that he can live to 95 years old. This is a prediction problem based on conditional probability in machine learning. If he smokes 10 cigarettes a day from the age of 50, how old can he live? This is a problem of intervention in causal reasoning. The same issue exists with customer intervention.</p>
+<p>How do you decide whether or not to intervene? As is customary, we derive our knowledge from our prior experiences. My friend Tom, for example, has been renting for ten years. All of his friends have purchased homes and are making money. Tom felt bad about it. He believed that if he bought a house like his friends, he would be able to make a fortune. Tom’s regret stems from what did not occur. The term “counterfactual” refers to what did not occur in the past. What action we should take in the event of a churn model intervention should be based on counterfactual inference. This is entirely the inferencing of forecast in machine learning, that is, forecasting based on past events. However, the counterfactual inference is based on an event that did not occur.</p>
+<p style="color:blue; font-size:25px;"> <strong>The thrid Challenge: Counterfactural inferencing based the event that doesn't exist.</strong></p>                  
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="churn_model.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. What is churn model?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="solution.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">solutions to the the Challenges</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tianxu Jia<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. What is churn model? &#8212; Churn Model</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Challenges of Churm Model" href="challenge.html" />
+    <link rel="prev" title="The Churn Model in Practice" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Churn Model</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   The Churn Model in Practice
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. What is churn model?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="challenge.html">
+   The Challenges of Churm Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="solution.html">
+   solutions to the the Challenges
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   conclusion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/churn_model.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchurn_model.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>1. What is churn model?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="what-is-churn-model">
+<h1>1. What is churn model?<a class="headerlink" href="#what-is-churn-model" title="Permalink to this headline">¶</a></h1>
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
+<p>If you Google churn model, you’ll discover that it’s most often used to predict whether or not a client will leave. There was a Kaggle challenge project about the churn model. Client churn was to be predicted using historical data.</p>
+<p>Making a crystal future teller appears to be a fantastic idea!</p>
+<p>Then we can ask another question: How did this churn model come about? Is it the product of a talented professor’s imagination who wants to conduct academic research in AI and machine learning? Is it from the marketing or operations department of a company?</p>
+<p>We can conjure up a story. Assume there are two hospitals. All of the doctors at Hospital One are geniuses. Based on the patient’s symptoms and historical data, they can accurately predict when the patient will heal or die.</p>
+<p>The doctors  in hospital two can do more work. They can not only predict the development of the patient’s condition (when it will heal or die) based on the patient’s symptoms and historical data, but they can also analyse the causal relationship of various factors and formulate intervention and treatment plans based on the patient’s symptoms and historical data. So the doctors in the Hospital Two changed the development of the patient’s condition, shorten the patient’s course of disease, and reduce the patient’s pain, and save the patient’s life!</p>
+<p>Obviously, we need doctors in the second hospital, although the doctors in the first hospital do forecast perfectly.</p>
+<p>Now we return to our churn model issue. Who or what department came up with the customer churn model? What is the purpose of the model? Dealing with customers and being concerned about customer loss should fall under the purview of a company’s marketing or operations department.</p>
+<p>They care whether customers lose, but they are more concerned with what they need to do if a customer wants to lose in order to retain the customer while also maximising their business profits.</p>
+<p>Doctors who can only predict the progression of a patient’s disease but cannot intervene in the progression of the patient’s disease are of little use. What the patient requires is an effective intervention by the doctor during the course of the disease. Similarly, when a company’s market or operations department proposes a customer churn model, they are concerned with customer churn prediction. They are more concerned, however, that when a customer wishes to lose, they must intervene in order to retain the customer at the lowest possible cost and profit.</p>
+<p>As shown in Figure 1, the customer churn model should include a customer churn forecasting and intervention system.</p>
+<div class="figure align-default" id="churn-intervene">
+<a class="reference internal image-reference" href="_images/churn-intervene.jpg"><img alt="_images/churn-intervene.jpg" src="_images/churn-intervene.jpg" style="height: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Overall block diagram of churn forecast and consult service</span><a class="headerlink" href="#churn-intervene" title="Permalink to this image">¶</a></p>
+</div>
+<br>
+<p>Churn model project with Commercially valuable should include:</p>
+<div style="font-size:25px">
+<b>
+1. Predict the churn of customers  <br>
+2. Intervene in customers who may be retained
+</b>
+</div>
+<br>
+<br>
+<p>This should be an iterative process that combines artificial intelligence and business consulting. Collect relevant data, create a basic data set, predict customer churn based on this data set, and then present intervention suggestions to the marketing/operations department. Continue to collect data after the intervention for the next round of prediction and intervention.</p>
+<p>Things will become more complicated once we consider intervention and develop a customer churn model with business value. In the forecasting stage, the output will no longer be divided into two categories (churning/no-churning), but into four, as shown in Figure 2:</p>
+<div class="figure align-default" id="classes">
+<a class="reference internal image-reference" href="_images/4-classes.png"><img alt="_images/4-classes.png" src="_images/4-classes.png" style="height: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Classify customers into 4 groups</span><a class="headerlink" href="#classes" title="Permalink to this image">¶</a></p>
+</div>
+<div style="font-size:25px">
+<b>
+1. Do-Not-Disturbs(Sleeping Dog): This kind of coustomers will retain if we do nothing, otherwise, they will churn <br>
+2. Definite leave: no matter what will happen, they will defininitly leave.  <br>
+3. Definitely Stay(Sure things): no matter what will happen, they will defininitly definitely stay.  <br>
+4. Persuadable: They will churn if we don't take some action to intervenwe them. <br>
+    </b>
+<br>
+</div>
+<p>It is best if we do nothing for the first class of customers. Any intervention or persuasion will be futile for the second and third classes of customers. We only need to intervene with the fourth category of customers.</p>
+<p>As a result, the churn model should be a two-part system: forecast and intervene. The forecast section determines who requires intervention, and the intervention section determines the best intervention decision.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The Churn Model in Practice</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="challenge.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Challenges of Churm Model</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tianxu Jia<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. solutions to the the Challenges &#8212; Churn Model</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="conclusion" href="conclusion.html" />
+    <link rel="prev" title="2. The Challenges of Churm Model" href="challenge.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Churn Model</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   The Churn Model in Practice
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="churn_model.html">
+   1. What is churn model?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="challenge.html">
+   2. The Challenges of Churm Model
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. solutions to the the Challenges
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   conclusion
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/solution.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsolution.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary">
+   3.1 Preliminary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-basic-concept-causal-graph-and-scm-structure-causal-model">
+     3.1.1 Some Basic concept: Causal Graph and SCM(Structure Causal Model)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-attention-conditional-probability-and-convention">
+     3.1.2 Special Attention: Conditional Probability and Convention
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machine-learning-and-correlation-is-not-causation">
+     3.1.3 Machine Learning and Correlation is not Causation.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#causal-inference-from-probabilitistic-graphical-model">
+   3.2 Causal Inference from Probabilitistic Graphical Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-causal-model-scm">
+   2.Structure Causal Model(SCM)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#counterfactual">
+   3. Counterfactual
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>3. solutions to the the Challenges</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary">
+   3.1 Preliminary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-basic-concept-causal-graph-and-scm-structure-causal-model">
+     3.1.1 Some Basic concept: Causal Graph and SCM(Structure Causal Model)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-attention-conditional-probability-and-convention">
+     3.1.2 Special Attention: Conditional Probability and Convention
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machine-learning-and-correlation-is-not-causation">
+     3.1.3 Machine Learning and Correlation is not Causation.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#causal-inference-from-probabilitistic-graphical-model">
+   3.2 Causal Inference from Probabilitistic Graphical Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-causal-model-scm">
+   2.Structure Causal Model(SCM)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#counterfactual">
+   3. Counterfactual
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="solutions-to-the-the-challenges">
+<h1>3. solutions to the the Challenges<a class="headerlink" href="#solutions-to-the-the-challenges" title="Permalink to this headline">¶</a></h1>
+<div style="margin-left:5%;">
+<p>Machine learning, whether regression or classification, seeks to discover the functional mapping relationship between input and output. Correlation and causality can be achieved through function mapping. The goal of developing a business churn model is to intervene and retain customers. As a result, it is critical to investigate causality and forecast the outcomes of intervention.</p>
+<p>Causality and intervention have long been a source of contention. Countless sages have spent their lives attempting to identify some causalities. Newton established the link between force and acceleration. Through the Leaning Tower of Pisa experiment, Galileo demonstrated that the falling speed of an object has nothing to do with its mass. Unfortunately, until recently, the mathematical representation of causal reasoning and intervention was proposed, and from that emerged a set of strict mathematical theories and methods.</p>
+<p>To begin our journey of real-world churn modelling, we must first clarify some fundamental concepts and how to represent causality.</p>
+</div>
+<div class="section" id="preliminary">
+<h2>3.1 Preliminary<a class="headerlink" href="#preliminary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="some-basic-concept-causal-graph-and-scm-structure-causal-model">
+<h3>3.1.1 Some Basic concept: Causal Graph and SCM(Structure Causal Model)<a class="headerlink" href="#some-basic-concept-causal-graph-and-scm-structure-causal-model" title="Permalink to this headline">¶</a></h3>
+<div style="margin-left:5%;">
+Smoking causes tar deposition in the lungs, which leads to lung cancer.
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/smoking.jpg"><img alt="_images/smoking.jpg" src="_images/smoking.jpg" style="width: 500px; height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">An example of causal graph</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Figure 3 depicts nodes, which are events such as smoking, tar, and lung cancer. The directed edge from node <span class="math notranslate nohighlight">\(A\)</span> to node <span class="math notranslate nohighlight">\(B\)</span> represents the causal of <span class="math notranslate nohighlight">\(B\)</span>. As the in figure 3, smoking is the causal of the tar in lung.  But, one may ask, tar in the must lead to lung cancer? Maybe not always! Churchill smoked heavily, but he lived to the age of 91 and died of natural causes rather than lung cancer. There is only a chance link between smoking and lung cancer. That is, the cause only causes the result to occur with a certain degree of probability. It’s known as conditional probability <span class="math notranslate nohighlight">\(P(B|A)\)</span>. As a result, we can use the probability language to represent the causal-effect relationship. This type of graph is known as a probabilistic graphical model, and it is also known as a causal graph when we want to emphasise the causal-effect relationship in causal inference.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/churchill-smoking.jpg"><img alt="_images/churchill-smoking.jpg" src="_images/churchill-smoking.jpg" style="width: 500px; height: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Did smoking cause Churchill had lung cancer?</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<br>
+<p>Tom and Jerry are two UK middle school students. They will take the GCSE exam. Tom is a hard worker. He studies for eight hours a day, whereas Jerry primarily plays computer games. He studies for only one hour per day. We can assume that Tom’s test results will be higher than Jerry’s. In a statistical sense, there should be a functional relationship between GCSE results and study hours.</p>
+<br>
+<div class="math notranslate nohighlight">
+\[ GCSE \, Score = f(study \, hours) \]</div>
+<p>Like the causal graph, we can also use simalar graph to represent the causal-effect relationship, that is called SCM(Structure Causal Model)</p>
+<p><img alt="The SCM of study hours and GCSE score" src="_images/GCSE.jpg" /></p>
+</div>
+</div>
+<div class="section" id="special-attention-conditional-probability-and-convention">
+<h3>3.1.2 Special Attention: Conditional Probability and Convention<a class="headerlink" href="#special-attention-conditional-probability-and-convention" title="Permalink to this headline">¶</a></h3>
+<div style="margin-left:5%;">
+<p>We must comprehend two particularly perplexing concepts: conditional probability and causality.</p>
+<p>Assume you have two events, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. We have already observed that event <span class="math notranslate nohighlight">\(A\)</span> has occurred. How do we calculate the likelihood that an event <span class="math notranslate nohighlight">\(B\)</span> will occur? In other words, how much information can we obtain from estimating the <span class="math notranslate nohighlight">\(B\)</span> if we already know the event <span class="math notranslate nohighlight">\(A\)</span>? It is denoted mathematically as <span class="math notranslate nohighlight">\(P(B|A)\)</span>. For example, if the doctor took the patient’s temperature and found it to be <span class="math notranslate nohighlight">\(39c\)</span>, what is the likelihood that he is infected with Covid-19? The doctor was curious about <span class="math notranslate nohighlight">\(P(infected with Covid19=Ture|temperature=39c)\)</span>. In our churn model problem, what is the probability that the customer will churn if we know he has lost his job? What we want to know is <span class="math notranslate nohighlight">\(P(customer will churn=Ture|job will be lost=Ture)\)</span>.</p>
+<p>Conditional probability demonstrates that a researcher is only an observer and recorder of a natural system, not an intervenor. All most machine learning algorithms deal with the conditional probability problem.</p>
+<p>It’s a different story in terms of causality.</p>
+<p>Let’s say we create the event <span class="math notranslate nohighlight">\(A\)</span>. What about the possibility of event <span class="math notranslate nohighlight">\(B\)</span> occurring? In the scenario, the researcher is not only an observer, but also a participant. He is also a component of the system that is being studied. A patent, for example, is extremely ill. He would die if he did not see a doctor. However, the patent decided to see a doctor. Judea Pearl &#64;alma991011292629705181 invented do-calculus to represent causal inference after intervention <span class="math notranslate nohighlight">\(P(A|do(B))\)</span>. In the churn model, the marketing department discovered that the customer would leave. To keep him, the marketing team will take some steps. This case can be represented as <span class="math notranslate nohighlight">\(P(retain the customer|do(intervention))\)</span>.</p>
+</div>
+</div>
+<div class="section" id="machine-learning-and-correlation-is-not-causation">
+<h3>3.1.3 Machine Learning and Correlation is not Causation.<a class="headerlink" href="#machine-learning-and-correlation-is-not-causation" title="Permalink to this headline">¶</a></h3>
+<div style="margin-left:5%;">
+<p>It primarily solves classification and regression problems in AI and machine learning. The statistical concept underlying them is correlation, not causation. When deciding how to intervene in customer churn, we must consider causality rather than correlation.</p>
+<p>For example, we can use the method of causal effect, rather than correlation, to examine the effects of the Russian-Ukrainian military conflict on customer churn.</p>
+<p>The EU and the United Kingdom backed Ukraine in the military conflict between Russia and Ukraine. However, as &#64;russianoil points out, Europe is heavily reliant on Russian energy supplies. As a result, Russia used energy as a tool to against EU. Please don’t get me wrong; I’m just a data scientist looking into the following causal-effect and customer churn.</p>
+<p>The conflict between Russia and Ukraine has increased energy prices in the UK and EU, causing people’s living costs and home energy bills to rise. As a result, some energy companies experienced customer churn.</p>
+<p><img alt="" src="_images/R-U-conflict.jpg" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="causal-inference-from-probabilitistic-graphical-model">
+<h2>3.2 Causal Inference from Probabilitistic Graphical Model<a class="headerlink" href="#causal-inference-from-probabilitistic-graphical-model" title="Permalink to this headline">¶</a></h2>
+<div style="margin-left:5%;">
+<p>The AB test is a type of causal reasoning method, but it is an experimental reasoning method. Experiential reasoning can be very costly at times. It is nearly impossible to conduct an experiment to determine the causal reasoning behind people’s market behaviour. We require causal reasoning based on observed data.</p>
+<p>Before we introduce the algorithms for causal inference based on experimental data, we will first discuss some PGM concepts (probabilitistic graphical model).</p>
+<p>A directed probabilitistic graphical model is made up of a collection of nodes and directed edges. Two nodes are connected by a single directed edge. With an arrow, it travels from one node to another. One example is depicted in the figure below:</p>
+<p><img alt="" src="_images/GPM-1.jpg" /></p>
+<center>Figure 6: directd graph</center>
+ </div>
+## 1. Backdoor Criterion
+    coming soon
+</div>
+<div class="section" id="structure-causal-model-scm">
+<h2>2.Structure Causal Model(SCM)<a class="headerlink" href="#structure-causal-model-scm" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>coming soon
+</pre></div>
+</div>
+</div>
+<div class="section" id="counterfactual">
+<h2>3. Counterfactual<a class="headerlink" href="#counterfactual" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>coming soon
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="challenge.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2. The Challenges of Churm Model</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="conclusion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">conclusion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tianxu Jia<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
