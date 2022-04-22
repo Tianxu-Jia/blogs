@@ -1,0 +1,18 @@
+baseURL: /
+languageCode: en-us
+title: Consider Phlebas
+theme: kraiklyn
+pygmentsCodeFences: yes
+pygmentsStyle: monokailight
+params:
+  customCss: []
+  externalTitle: Kraiklyn theme
+  sidebarColor: default
+menu:
+  shortcuts:
+    - name: Kraiklyn on Github
+      url: https://github.com/jsnjack/kraiklyn
+      weight: 10
+    - name: Hugo docs
+      url: https://gohugo.io/documentation/
+      weight: 20

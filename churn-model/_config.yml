@@ -3,6 +3,7 @@
 
 title: Churn Model
 author: Tianxu Jia
+affiliation: Station10 Ltd, london UK
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -14,6 +15,8 @@ execute:
 latex:
   latex_documents:
     targetname: book.tex
+
+page_titles: true
 
 sphinx:
   config:

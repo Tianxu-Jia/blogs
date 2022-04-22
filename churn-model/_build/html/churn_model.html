@@ -222,38 +222,41 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="what-is-churn-model">
 <h1>What is churn model?<a class="headerlink" href="#what-is-churn-model" title="Permalink to this headline">¶</a></h1>
 <div style="margin-left:5%; margin-right:5%;">
-If you check on google about the churn model, mostly you will find that building a churn model is to forecast which client will leave or not. There was a Kaggle challenge project about the churn model. Client churn was to be forecasted based on historical data.
-<p>Make a future teller cristle seems fabulus!</p>
-<p>Then, we can ask a further question: How how needs this churn model come? Is it from the imagination of a talented professor who wants to do some academic research in AI and machine learning? Or is it from some company’s marketing or operation department?</p>
-<p>We can image a story. Suppose there are two hosptials. In hospital one, all doctors are geniuses. They can accurately predict when the patient will heal or die according to the patient’s symptoms and historical data. In hospital two, the doctors can do further work.They can not only predict the development of the patient’s condition (when it will heal or die) based on the patient’s symptoms and historical data, but also analyze the causal relationship of various factors and formulate intervention and treatment plans according to the patient’s symptoms and historical data, so as to change the development of the patient’s condition, shorten the patient’s course of disease and reduce the patient’s pain, Save the patient’s life!</p>
+<p>If you Google churn model, you’ll discover that it’s most often used to predict whether or not a client will leave. There was a Kaggle challenge project about the churn model. Client churn was to be predicted using historical data.</p>
+<p>Making a crystal future teller appears to be a fantastic idea!</p>
+<p>Then we can ask another question: How did this churn model come about? Is it the product of a talented professor’s imagination who wants to conduct academic research in AI and machine learning? Is it from the marketing or operations department of a company?</p>
+<p>We can conjure up a story. Assume there are two hospitals. All of the doctors at Hospital One are geniuses. Based on the patient’s symptoms and historical data, they can accurately predict when the patient will heal or die.</p>
+<p>The doctors  in hospital two can do more work. They can not only predict the development of the patient’s condition (when it will heal or die) based on the patient’s symptoms and historical data, but they can also analyse the causal relationship of various factors and formulate intervention and treatment plans based on the patient’s symptoms and historical data. So the doctors in the Hospital Two changed the development of the patient’s condition, shorten the patient’s course of disease, and reduce the patient’s pain, and save the patient’s life!</p>
 <p>Obviously, we need doctors in the second hospital, although the doctors in the first hospital do forecast perfectly.</p>
-<p>Now we come back to our churn model problem. Who or which department proposed the customer churn model? Why do they need the model? Dealing with customers and caring about whether customers are lost should be the market or operation department of a company.</p>
-<p>They care about whether customers lose, but they are more concerned about what they need to do if a customer wants to lose, so as to retain the customer and maximize their business profits at the same time.</p>
-<p>Doctors who can only predict the development of the patient’s course of disease, but can not intervene in the development of the patient’s course of disease, are of little use. What the patient needs is the doctor’s effective intervention in the course of the disease. Similarly, when a company’s market or operation department puts forward a customer churn model, they are concerned about the prediction of customer churn. However, they are more concerned that when a customer wants to lose, they need to intervene, so as to retain the customer with the minimum cost and maximum profit.</p>
-<p>So, specifically, the customer churn model should be a customer churn and intervention system, as shown in Figure 1:</p>
+<p>Now we return to our churn model issue. Who or what department came up with the customer churn model? What is the purpose of the model? Dealing with customers and being concerned about customer loss should fall under the purview of a company’s marketing or operations department.</p>
+<p>They care whether customers lose, but they are more concerned with what they need to do if a customer wants to lose in order to retain the customer while also maximising their business profits.</p>
+<p>Doctors who can only predict the progression of a patient’s disease but cannot intervene in the progression of the patient’s disease are of little use. What the patient requires is an effective intervention by the doctor during the course of the disease. Similarly, when a company’s market or operations department proposes a customer churn model, they are concerned with customer churn prediction. They are more concerned, however, that when a customer wishes to lose, they must intervene in order to retain the customer at the lowest possible cost and profit.</p>
+<p>As shown in Figure 1, the customer churn model should include a customer churn forecasting and intervention system.</p>
 <div class="figure align-default" id="churn-intervene">
 <a class="reference internal image-reference" href="_images/churn-intervene.jpg"><img alt="_images/churn-intervene.jpg" src="_images/churn-intervene.jpg" style="height: 450px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Overall block diagram of churn forecast and consult service</span><a class="headerlink" href="#churn-intervene" title="Permalink to this image">¶</a></p>
 </div>
+<br>
 <p>Churn model project with Commercially valuable should include:</p>
-<ol class="simple">
-<li><p>Predict the loss of customers</p></li>
-<li><p>Intervene in customers who may be retained</p></li>
-</ol>
-<p>This should be an iterative process in which artificial intelligence and business consulting are closely combined. Firstly, collect relevant data, establish a basic data set, predict the churning of coustomer based on this data set, and then put forward intervention suggestions to marketing/operation department. After the intervention, continue to collect data for the next round of prediction and intervention.</p>
-<p>Once we take intervention into account and build a customer churn model with business value, things will become more complicated. In the forecasting stage, the output will no longer be two categories(churning/no-churning), but four categories as shown below:</p>
+<b>
+1. Predict the churn of customers  <br>
+2. Intervene in customers who may be retained
+</b>
+<br>
+<p>This should be an iterative process that combines artificial intelligence and business consulting. Collect relevant data, create a basic data set, predict customer churn based on this data set, and then present intervention suggestions to the marketing/operations department. Continue to collect data after the intervention for the next round of prediction and intervention.</p>
+<p>Things will become more complicated once we consider intervention and develop a customer churn model with business value. In the forecasting stage, the output will no longer be divided into two categories (churning/no-churning), but into four, as shown in Figure 2:</p>
 <div class="figure align-default" id="classes">
 <a class="reference internal image-reference" href="_images/4-classes.png"><img alt="_images/4-classes.png" src="_images/4-classes.png" style="height: 450px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Classify customers into 4 groups</span><a class="headerlink" href="#classes" title="Permalink to this image">¶</a></p>
 </div>
-<ol class="simple">
-<li><p>Do-Not-Disturbs(Sleeping Dog): This kind of coustomers will retain if we do nothing, otherwise, they will churn</p></li>
-<li><p>Definite leave: no matter what will happen, they will defininitly leave.</p></li>
-<li><p>Definitely Stay(Sure things): no matter what will happen, they will defininitly definitely stay.</p></li>
-<li><p>Persuadable: They will churn if we don’t take some action to intervenwe them.</p></li>
-</ol>
-<p>For the first class of customers, it is optimal that we don’t do anything. For the second and third classes of customers, any intervention and persuasion will be worthless. Only the fourth category of customers, we need to intervene.</p>
-<p>So, the churn model should be a system that includes two parts: forecast and intervene. The forecast part identify who needs intervension and the intervention part determines the best intervention decision</p>
+<b>
+1. Do-Not-Disturbs(Sleeping Dog): This kind of coustomers will retain if we do nothing, otherwise, they will churn <br>
+2. Definite leave: no matter what will happen, they will defininitly leave.  <br>
+3. Definitely Stay(Sure things): no matter what will happen, they will defininitly definitely stay.  <br>
+4. Persuadable: They will churn if we don't take some action to intervenwe them. <br>
+    </b>
+<p>It is best if we do nothing for the first class of customers. Any intervention or persuasion will be futile for the second and third classes of customers. We only need to intervene with the fourth category of customers.</p>
+<p>As a result, the churn model should be a two-part system: forecast and intervene. The forecast section determines who requires intervention, and the intervention section determines the best intervention decision.</p>
 </div>
 </div>
 
