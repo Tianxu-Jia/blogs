@@ -1,8 +1,8 @@
-# The Challenges of Churm Model
+# 2. The Challenges of Churm Model
 
-## 1. Forecast and Causation
+## 2.1. Forecast and Causation
 
-<div style="margin-left:5%; margin-right:5%;">
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
     
 In machine learning, the four classification prediction of the churn model is a simple problem. We have a large number of mature machine learning algorithms for this. The real challenge is determining how to intervene for customers who can be persuaded. To understand the challenge, we must first understand the fundamental concept of forecasting in machine learning, as well as what we mean by intervention. How to use logical reasoning language to describe a doctor's intervention in the course of a patient's disease.
 
@@ -20,11 +20,12 @@ The mapping $f$ from $x$ to $y$ can be either correlation or causality. For exam
 Let's return to our churn model issue. We hope to keep customers by intervening. So, we're hoping to figure out what keeps customers stay. Because the forecast in machine learning does not identify the causal relationship, we must find other methods of identifying the causalities of customer retention.
 
 
-<p><strong>The first Challenge: Identify the causation of retaining customer.</strong></p>
+<p style="color:blue; font-size:25px;"><strong>The first Challenge: Identify the causation of retaining customer.</strong></p>
+
 </div>
 
-## 2. Observation and experimentation
-<div style="margin-left:5%; margin-right:5%;">
+## 2.2. Observation and experimentation
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
 It can be divided into observation data and experimental data based on the process of data generation.
 
 The data obtained by controlling the experimental process and repeating experiments is referred to as experimental data. For example, nearly all physical and chemical experiment data. Causal reasoning is usually easier for it. We can control one variable while observing the change in another variable to determine whether there is a causal effect between them, and this type of experiment can be observed and measured repeatedly. We can, for example, control the cock's crowing and observe whether the sun rises. We can then deduce whether there is a link between the cock crowing and the sun rising. In the object motion experiment, we can control the force applied to the object and observe the change in its acceleration to infer the causal relationship between force and acceleration.
@@ -34,14 +35,14 @@ Observation data indicates that a researcher does not (or cannot) participate in
 
 The causal reasoning of observed data will become extremely difficult, and there will be a lot of pseudo-knowledge in it at times. For instance, what caused the war. What factors contributed to the economic downturn and recovery? And so forth. Similarly, in the customer churn model, determining what causes customer churn is a difficult problem. The problem with inferring causality from observed data is that we can't repeat the experiment and, at the same time, we don't know how the data was generated. The phrase "all is in data" is commonly used in data science, but this is not true for observed data.
     
-<p><strong>The second Challenge: How to identify causal from observation data?</strong></p>
+<p style="color:blue; font-size:25px;"> <strong>The second Challenge: How to identify causal from observation data?</strong></p>
     
 </div>
     
 
-## 3. Intervention and Counterfactual
+## 2.3. Intervention and Counterfactual
 
-<div style="margin-left:5%; margin-right:5%;">
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
     
     
 Intervention is defined as any action that alters the course of development. Doctors, for example, can alter the course of a patient's illness through treatment. Customers are retained by the marketing department through customer intervention.
@@ -52,7 +53,7 @@ Intervention and conditional probabilities are not the same thing. Intervention 
 
 How do you decide whether or not to intervene? As is customary, we derive our knowledge from our prior experiences. My friend Tom, for example, has been renting for ten years. All of his friends have purchased homes and are making money. Tom felt bad about it. He believed that if he bought a house like his friends, he would be able to make a fortune. Tom's regret stems from what did not occur. The term "counterfactual" refers to what did not occur in the past. What action we should take in the event of a churn model intervention should be based on counterfactual inference. This is entirely the inferencing of forecast in machine learning, that is, forecasting based on past events. However, the counterfactual inference is based on an event that did not occur.
 
-<p><strong>The thrid Challenge: Counterfactural inferencing based the event that doesn't exist.</strong></p>                  
+<p style="color:blue; font-size:25px;"> <strong>The thrid Challenge: Counterfactural inferencing based the event that doesn't exist.</strong></p>                  
 
 </div>
 

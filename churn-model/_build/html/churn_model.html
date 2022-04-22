@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What is churn model? &#8212; Churn Model</title>
+    <title>1. What is churn model? &#8212; Churn Model</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -101,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   What is churn model?
+   1. What is churn model?
   </a>
  </li>
  <li class="toctree-l1">
@@ -208,7 +208,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What is churn model?</h1>
+                <h1>1. What is churn model?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -220,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="what-is-churn-model">
-<h1>What is churn model?<a class="headerlink" href="#what-is-churn-model" title="Permalink to this headline">¶</a></h1>
-<div style="margin-left:5%; margin-right:5%;">
+<h1>1. What is churn model?<a class="headerlink" href="#what-is-churn-model" title="Permalink to this headline">¶</a></h1>
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
 <p>If you Google churn model, you’ll discover that it’s most often used to predict whether or not a client will leave. There was a Kaggle challenge project about the churn model. Client churn was to be predicted using historical data.</p>
 <p>Making a crystal future teller appears to be a fantastic idea!</p>
 <p>Then we can ask another question: How did this churn model come about? Is it the product of a talented professor’s imagination who wants to conduct academic research in AI and machine learning? Is it from the marketing or operations department of a company?</p>
@@ -238,10 +238,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <br>
 <p>Churn model project with Commercially valuable should include:</p>
+<div style="font-size:25px">
 <b>
 1. Predict the churn of customers  <br>
 2. Intervene in customers who may be retained
 </b>
+</div>
+<br>
 <br>
 <p>This should be an iterative process that combines artificial intelligence and business consulting. Collect relevant data, create a basic data set, predict customer churn based on this data set, and then present intervention suggestions to the marketing/operations department. Continue to collect data after the intervention for the next round of prediction and intervention.</p>
 <p>Things will become more complicated once we consider intervention and develop a customer churn model with business value. In the forecasting stage, the output will no longer be divided into two categories (churning/no-churning), but into four, as shown in Figure 2:</p>
@@ -249,12 +252,15 @@ const thebe_selector_output = ".output, .cell_output"
 <a class="reference internal image-reference" href="_images/4-classes.png"><img alt="_images/4-classes.png" src="_images/4-classes.png" style="height: 450px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Classify customers into 4 groups</span><a class="headerlink" href="#classes" title="Permalink to this image">¶</a></p>
 </div>
+<div style="font-size:25px">
 <b>
 1. Do-Not-Disturbs(Sleeping Dog): This kind of coustomers will retain if we do nothing, otherwise, they will churn <br>
 2. Definite leave: no matter what will happen, they will defininitly leave.  <br>
 3. Definitely Stay(Sure things): no matter what will happen, they will defininitly definitely stay.  <br>
 4. Persuadable: They will churn if we don't take some action to intervenwe them. <br>
     </b>
+<br>
+</div>
 <p>It is best if we do nothing for the first class of customers. Any intervention or persuasion will be futile for the second and third classes of customers. We only need to intervene with the fourth category of customers.</p>
 <p>As a result, the churn model should be a two-part system: forecast and intervene. The forecast section determines who requires intervention, and the intervention section determines the best intervention decision.</p>
 </div>

@@ -1,4 +1,4 @@
-# solutions to the the Challenges
+# 3. solutions to the the Challenges
 
 <div style="margin-left:5%;">
     
@@ -9,9 +9,12 @@ Causality and intervention have long been a source of contention. Countless sage
 
 To begin our journey of real-world churn modelling, we must first clarify some fundamental concepts and how to represent causality.
 
+</div>
+
 ## 3.1 Preliminary
 ### 3.1.1 Some Basic concept: Causal Graph and SCM(Structure Causal Model)
 
+<div style="margin-left:5%;">
 Smoking causes tar deposition in the lungs, which leads to lung cancer.
     
     
@@ -42,17 +45,15 @@ Tom and Jerry are two UK middle school students. They will take the GCSE exam. T
 $$ GCSE \, Score = f(study \, hours) $$
 Like the causal graph, we can also use simalar graph to represent the causal-effect relationship, that is called SCM(Structure Causal Model)
 
+
+![The SCM of study hours and GCSE score](./images/GCSE.jpg)
     
-```{figure} ./images/GCSE.jpg
----
-height: 200px
-width: 400px
----
-The SCM of study hours and GCSE score
-```
-<br>
+
+</div>
 
 ### 3.1.2 Special Attention: Conditional Probability and Convention
+    
+<div style="margin-left:5%;">
     
 We must comprehend two particularly perplexing concepts: conditional probability and causality.
     
@@ -67,8 +68,12 @@ It's a different story in terms of causality.
     
 Let's say we create the event $A$. What about the possibility of event $B$ occurring? In the scenario, the researcher is not only an observer, but also a participant. He is also a component of the system that is being studied. A patent, for example, is extremely ill. He would die if he did not see a doctor. However, the patent decided to see a doctor. Judea Pearl @alma991011292629705181 invented do-calculus to represent causal inference after intervention $P(A|do(B))$. In the churn model, the marketing department discovered that the customer would leave. To keep him, the marketing team will take some steps. This case can be represented as $P(retain the customer|do(intervention))$.
 
-
+</div>
+    
+    
 ### 3.1.3 Machine Learning and Correlation is not Causation.
+    
+<div style="margin-left:5%;">
     
 It primarily solves classification and regression problems in AI and machine learning. The statistical concept underlying them is correlation, not causation. When deciding how to intervene in customer churn, we must consider causality rather than correlation.
 
@@ -79,8 +84,9 @@ The EU and the United Kingdom backed Ukraine in the military conflict between Ru
     
 The conflict between Russia and Ukraine has increased energy prices in the UK and EU, causing people's living costs and home energy bills to rise. As a result, some energy companies experienced customer churn.
    
-<br>
+
 ![](./images/R-U-conflict.jpg)
+
 </div>
 
 ## 3.2 Causal Inference from Probabilitistic Graphical Model

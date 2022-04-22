@@ -1,6 +1,6 @@
-# What is churn model?
+# 1. What is churn model?
 
-<div style="margin-left:5%; margin-right:5%;">
+<div style="margin-left:5%; margin-right:5%; font-size:20px">
     
     
 If you Google churn model, you'll discover that it's most often used to predict whether or not a client will leave. There was a Kaggle challenge project about the churn model. Client churn was to be predicted using historical data.
@@ -43,11 +43,14 @@ Overall block diagram of churn forecast and consult service
    
 Churn model project with Commercially valuable should include:
 
+<div style="font-size:25px">
 <b>
 1. Predict the churn of customers  <br>
 2. Intervene in customers who may be retained
 </b>
-
+</div>
+    
+<br>
 <br>
     
 This should be an iterative process that combines artificial intelligence and business consulting. Collect relevant data, create a basic data set, predict customer churn based on this data set, and then present intervention suggestions to the marketing/operations department. Continue to collect data after the intervention for the next round of prediction and intervention.
@@ -64,13 +67,15 @@ name: 4-classes
 Classify customers into 4 groups
 ```
 
+<div style="font-size:25px">
 <b>
 1. Do-Not-Disturbs(Sleeping Dog): This kind of coustomers will retain if we do nothing, otherwise, they will churn <br>
 2. Definite leave: no matter what will happen, they will defininitly leave.  <br>
 3. Definitely Stay(Sure things): no matter what will happen, they will defininitly definitely stay.  <br>
 4. Persuadable: They will churn if we don't take some action to intervenwe them. <br>
     </b>
-
+<br>
+</div>
 
 It is best if we do nothing for the first class of customers. Any intervention or persuasion will be futile for the second and third classes of customers. We only need to intervene with the fourth category of customers.
 
